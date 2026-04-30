@@ -1,3 +1,6 @@
 src/
 prettier.config.js
 vitest.config.ts
+tests/
+.astro/
+.github/
