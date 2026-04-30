@@ -1,0 +1,29 @@
+{
+  "name": "astro-htaccess-manager",
+  "version": "0.0.0",
+  "description": "Manage multiple htaccess files for Astro",
+  "keywords": [
+    "astro",
+    "htaccess",
+    "apache",
+    "astro-integration"
+  ],
+  "license": "MIT",
+  "author": "Adam Laycock",
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "astro": ">= 6"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@types/node": "^25.6.0",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  }
+}
