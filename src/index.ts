@@ -7,7 +7,7 @@ import {
   type ErrorCode,
   type HTAccessFileOptions,
   htAccessFileContent
-} from './lib/htaccess'
+} from './lib/htaccess.js'
 
 const {writeFile} = fs.promises
 
