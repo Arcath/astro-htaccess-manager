@@ -38,7 +38,7 @@ export const htAccessManager = (options: HTAccessManagerConfiguration) => {
   }
 
   if (options.cachingRules) {
-    htAccessFiles['/.htaccess'].cachingRules = options.cachingRules
+    htAccessFiles['/.htaccess']!.cachingRules = options.cachingRules
   }
 
   const astroCaching =
@@ -155,7 +155,7 @@ export const htAccessManager = (options: HTAccessManagerConfiguration) => {
         const files = Object.keys(htAccessFiles).map(fileName => {
           return {
             fileName,
-            contents: htAccessFileContent(htAccessFiles[fileName])
+            contents: htAccessFileContent(htAccessFiles[fileName]!)
           }
         })
 
