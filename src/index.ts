@@ -53,6 +53,7 @@ export const htAccessManager = (options: HTAccessManagerConfiguration) => {
 
   let baseDir: string | undefined
   let write: boolean = true
+  const discoveredRoutes: string[] = []
 
   const integration: AstroIntegration = {
     name: 'astro-htaccess-manager',
@@ -77,6 +78,12 @@ export const htAccessManager = (options: HTAccessManagerConfiguration) => {
       },
       'astro:routes:resolved': async ({logger, routes}) => {
         routes.forEach(route => {
+          if (discoveredRoutes.includes(route.entrypoint)) {
+            return
+          }
+
+          discoveredRoutes.push(route.entrypoint)
+
           switch (route.type) {
             case 'page':
               const match = route.pattern.match(errorPageRegex)
