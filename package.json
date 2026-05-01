@@ -1,6 +1,6 @@
 {
   "name": "astro-htaccess-manager",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Manage multiple htaccess files for Astro",
   "keywords": [
     "astro",
@@ -14,7 +14,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "vitest",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "tsc"
   },
   "peerDependencies": {
     "astro": ">= 6"
